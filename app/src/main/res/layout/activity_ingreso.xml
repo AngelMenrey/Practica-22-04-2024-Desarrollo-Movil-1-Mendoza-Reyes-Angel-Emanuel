@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ingreso">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="114dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="114dp"
+        android:text="@string/app_name"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgLogoSmall"
+        android:layout_width="83dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="164dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo"
+        app:srcCompat="@drawable/baseline_directions_bus_24" />
+
+    <EditText
+        android:id="@+id/edtCorreo"
+        android:layout_width="297dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="57dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/correo"
+        android:inputType="textEmailAddress"
+        android:textColorHint="#9C27B0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogoSmall"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/edtContrasena"
+        android:layout_width="288dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="60dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/contrasena"
+        android:inputType="textPassword"
+        android:textColorHint="#9C27B0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtCorreo"
+        tools:ignore="TextContrastCheck" />
+
+    <Switch
+        android:id="@+id/swtGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="208dp"
+        android:minHeight="48dp"
+        android:text="@string/guardar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtContrasena"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Button
+        android:id="@+id/btnIngresar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="74dp"
+        android:onClick="onClick"
+        android:text="@string/ingresar"
+        app:layout_constraintEnd_toStartOf="@+id/btnBorrar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/swtGuardar" />
+
+    <Button
+        android:id="@+id/btnBorrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="76dp"
+        android:onClick="onClick"
+        android:text="@string/borrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtContrasena" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
